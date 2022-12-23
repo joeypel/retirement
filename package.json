@@ -6,7 +6,7 @@
 		"scripts": {
 		  "dev": "vite dev",
 		  "build": "vite build",
-		  "deploy": " gh-pages -d docs"
+		  "deploy": " gh-pages -d build"
 		},
 	  
 	"devDependencies": {

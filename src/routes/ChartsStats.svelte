@@ -1,9 +1,9 @@
 <!-- Container for demo purpose -->
 <script>
 	export let chartData;
-	export let totalSaved = chartData[1][chartData[1].length - 1]?.toFixed(2) || 0;
-	export let totalContributed = chartData[0][chartData[0].length - 1]?.toFixed(2) || 0;
-	export let totalInterest = totalSaved - totalContributed;
+	$: totalSaved = chartData[1][chartData[1].length - 1]?.toFixed(2) || 0;
+	$: totalContributed = chartData[0][chartData[0].length - 1]?.toFixed(2) || 0;
+	$: totalInterest = totalSaved - totalContributed;
 </script>
 
 <!-- Section: Design Block -->
@@ -44,7 +44,7 @@
 			</h5>
 			<h6 class="font-medium text-gray-500">Total Contributions</h6>
 			<p class="font-medium text-sm text-gray-500">
-				{(Math.round((totalContributed / totalSaved) * 100) / 100) * 100}% of total
+				{(totalContributed / totalSaved*100).toFixed(2)}% of total
 			</p>
 			<hr class="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
 		</div>
@@ -65,7 +65,7 @@
 			</h5>
 			<h6 class="font-medium text-gray-500">Total Interest</h6>
 			<p class="font-medium text-sm text-gray-500">
-				{(Math.round((totalInterest / totalSaved) * 100) / 100) * 100}% of total
+				{(totalInterest / totalSaved*100).toFixed(2)}% of total
 			</p>
 			<hr class="absolute right-0 top-0 w-px bg-gray-200 h-full hidden lg:block" />
 		</div>

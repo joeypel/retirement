@@ -7,12 +7,12 @@ const dev = "production" === "development";
 const config = {
   kit: {
     adapter: adapter({
-      pages: "docs",
-      assets: "docs",
+      pages: "build",
+      assets: "build",
     }),
     paths: {
       // change below to your repo name
-      base: dev ? "" : "/retirementCalc",
+      base: "/retirementCalc",
     },
     // hydrate the <div id="svelte"> element in src/app.html
     // target: "#svelte",
