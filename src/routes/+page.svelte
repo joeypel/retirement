@@ -1,6 +1,6 @@
 
 <script>
-
+import { base } from "$app/paths";
     import "../app.css";
 	import Input from './Input.svelte';
 	import Chart from './Chart.svelte';
